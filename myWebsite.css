@@ -1,0 +1,27 @@
+body {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  overflow: scroll;
+
+  /* background-color: #ffb6dd; */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnn6ZFpu-VQMKW2CRt_9CHay69bp-9g9ZHtHla4hyGQTuh9Dbw4w&s");
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: white;
+  font-size: large;
+  font-weight: 700;
+  font-family: sans-serif;
+  /* font-style: italic;
+  text-align: center; */
+}
+
+p {
+  /* color: turquoise;
+  font-size: medium;
+  font-family: sans-serif;
+  font-style: normal;
+  text-align: center; */
+}
