@@ -14,3 +14,8 @@ fs.readFile('./ELEN4010.txt', 'utf8', (err, data) => {
   // err will either contain the error or null
   console.log(data) // if there weren't errors, send the data to the console
 })
+
+// CHALLANGE---- USING dolor MODULE TO GENERATE A SENTENCE
+console.log('Loading a dolor module')
+require('./dolor')
+console.log('Done Loading a dolor module')
