@@ -1,144 +1,144 @@
-'use strict'; // Used for protection against double declarations, etc..
+"use strict"; // Used for protection against double declarations, etc..
 
 // variables
-let sum = 0
+let sum = 0;
 
 for (let i = 0; i < 9; i++) {
-  sum += 1
+  sum += 1;
 }
 
-if (sum % 2 === 0) console.log('sum is even')
-else console.log('sum is odd')
+if (sum % 2 === 0) console.log("sum is even");
+else console.log("sum is odd");
 
 // Scripted functions
 
-const a = 5
-const b = 5
+const a = 5;
+const b = 5;
 
-console.log(`Ten is ${a + b} and not ${a * b}.`)
+console.log(`Ten is ${a + b} and not ${a * b}.`);
 
-let s = 'Hellos';
+let s = "Hellos";
 // Weak typing
-console.log(`a = ${s}, "s" is ${typeof s}`)
+console.log(`a = ${s}, "s" is ${typeof s}`);
 
-s = 5
-s += 2
+s = 5;
+s += 2;
 
-console.log(`s = ${s}, "s" is ${typeof s}`)
+console.log(`s = ${s}, "s" is ${typeof s}`);
 
-s = true
+s = true;
 
-console.log(`s = ${s}, "s" is a ${typeof s}`)
+console.log(`s = ${s}, "s" is a ${typeof s}`);
 
 // Functions
-const add = function (a, b) {
-  return a + b
+const add = function(a, b) {
+  return a + b;
 };
 
-const result = add(2, 3)
-console.log(result)
+const result = add(2, 3);
+console.log(result);
 
-const anotherAdd = add
-console.log(anotherAdd(12, 4))
+const anotherAdd = add;
+console.log(anotherAdd(12, 4));
 
 // Exercise 4
 
-const farToCel = function (faren) {
-  return (faren - 32) * (5 / 9)
+const farToCel = function(faren) {
+  return (faren - 32) * (5 / 9);
 };
 
-const conv = farToCel(0)
-console.log(conv)
+const conv = farToCel(0);
+console.log(conv);
 
 // Objects
 
 // creating an object with properties
 const student = {
-  name: 'Zwavhu',
+  name: "Zwavhu",
   Age: 22,
   studentNumber: 1110574
-}
+};
 
-console.log(student)
+console.log(student);
 
 console.log(
   `"Student name is: " ${student.name} "and age is: " ${student.Age}`
-)
+);
 
 // adding a property to the class
 
-const addHobby = function (theStudent, hobby) {
-  theStudent.hobby = hobby
+const addHobby = function(theStudent, hobby) {
+  theStudent.hobby = hobby;
 };
 
-addHobby(student, 'Photography')
+addHobby(student, "Photography");
 
-console.log(student)
+console.log(student);
 
 // EXERCISE 4
 
 const course = {
-  courseCode: 'ELEN4010'
-}
+  courseCode: "ELEN4010"
+};
 
 const course2 = {
-  courseCode: 'ELEN3009'
-}
-
-const YearOffer = function (course, course2) {
-  if (course.courseCode.includes('40')) course.yearOffered = 4
-  else if (course2.courseCode.includes('30')) course2.yearOffered = 3
-  else console.log('Course not available for that year')
+  courseCode: "ELEN3009"
 };
 
-const courseSummary = function (course) {
-  console.log(`Year offered for ${course.courseCode} is ${course.yearOffered}`)
+const YearOffer = function(course, course2) {
+  if (course.courseCode.includes("40")) course.yearOffered = 4;
+  else if (course2.courseCode.includes("30")) course2.yearOffered = 3;
+  else console.log("Course not available for that year");
+};
+
+const courseSummary = function(course) {
+  console.log(`Year offered for ${course.courseCode} is ${course.yearOffered}`);
   console.log(
     `Year offered for ${course2.courseCode} is ${course2.yearOffered}`
-  )
+  );
 };
 
-YearOffer(course, course2)
-courseSummary(course)
-console.log(course2)
+YearOffer(course, course2);
+courseSummary(course);
+console.log(course2);
 
 // EXERCISE 6
 
 // Creating an account object
 
 let account = {
-  name: 'Miss Zwavhudi',
+  name: "Miss Zwavhudi",
   number: 1234567,
   depositAmount: 200,
   withdrawalAmount: 300,
 
-  deposit: function () {
-    return this.depositAmount
+  deposit: function() {
+    return this.depositAmount;
   },
 
-  withdraw: function () {
-    return this.withdrawalAmount
+  withdraw: function() {
+    return this.withdrawalAmount;
   },
 
-  balance: function () {
-    this.balance += this.depositAmount - this.withdrawalAmount
-    return this.balance
+  balance: function() {
+    this.balance += this.depositAmount - this.withdrawalAmount;
+    return this.balance;
   },
 
-  transactionSummary: function () {
-    console.log(`This account has a balance of ${this.depositAmount} `)
+  transactionSummary: function() {
+    console.log(`This account has a balance of ${this.depositAmount} `);
   }
-}
+};
 
 // Arrays
 
-let numbers = [76, 55.7, 89, 37.5, 61]
-numbers.push(19)
-numbers.unshift(61)
-numbers[1] = 12
-console.log(numbers)
-numbers.splice(3, 1, 99)
-console.log(numbers[7])
+let numbers = [76, 55.7, 89, 37.5, 61];
+numbers.push(19);
+numbers.unshift(61);
+numbers[1] = 12;
+console.log(numbers);
+numbers.splice(3, 1, 99);
+console.log(numbers[7]);
 
 // higher-order functions and callbacks
 
@@ -154,47 +154,47 @@ console.log(numbers[7])
 //   console.log(`The new array is ${newArr} `)
 // }
 
-const map = function (functionToApply, array) {
-  array.forEach(functionToApply)
+const map = function(functionToApply, array) {
+  array.forEach(functionToApply);
 };
 
-const functionToApply = function (num) {
-  const newArr = []
-  newArr.push(num * num)
-  console.log(`The new array is ${newArr}`)
+const functionToApply = function(num) {
+  const newArr = [];
+  newArr.push(num * num);
+  console.log(`The new array is ${newArr}`);
 };
 
-const array = [5, 10, 15, 20]
+const array = [5, 10, 15, 20];
 
-map(functionToApply, array)
+map(functionToApply, array);
 
 // Object Equality
 
 const electives = [
   {
-    name: 'Helen',
-    courseCode: 'ELEN4010',
+    name: "Helen",
+    courseCode: "ELEN4010",
     yearOffered: 4
   },
   {
-    name: 'Jane',
-    courseCode: 'ELEN4010',
+    name: "Jane",
+    courseCode: "ELEN4010",
     yearOffered: 4
   },
   {
-    name: 'Joe',
-    courseCode: 'ELEN4000',
+    name: "Joe",
+    courseCode: "ELEN4000",
     yearOffered: 3
   },
   {
-    name: 'Thendo',
-    courseCode: 'ELEN4000',
+    name: "Thendo",
+    courseCode: "ELEN4000",
     yearOffered: 2
   }
-]
+];
 
 // EXERCISE 9
-console.log('Exercise 9: ')
+console.log("Exercise 9: ");
 
 // const deleteStudent = function (studentToErase, studentsArray) {
 //   const indexOfStudent = studentsArray.findIndex(function (element) {
@@ -204,113 +204,113 @@ console.log('Exercise 9: ')
 //   })
 
 // using arrow functions
-const deleteStudent = function (studentToErase, studentsArray) {
+const deleteStudent = function(studentToErase, studentsArray) {
   const indexOfStudent = studentsArray.findIndex(
     element =>
       element.name === studentToErase.name && element.age === studentToErase.age
-  )
+  );
 
   if (indexOfStudent === -1) {
-    return studentsArray
+    return studentsArray;
   } else {
     // delete studentsArray[indexOfStudent] ==>this returns an array with a "empty text" at position of deleted element
-    studentsArray.splice(indexOfStudent, 1)
+    studentsArray.splice(indexOfStudent, 1);
 
-    return studentsArray
+    return studentsArray;
   }
-}
+};
 
 let students1 = [
   {
-    name: 'Kwezi',
+    name: "Kwezi",
     studentNumber: 453528,
     yearOfStudy: 4
   },
   {
-    name: 'Pieter',
+    name: "Pieter",
     studentNumber: 454345,
     yearOfStudy: 3
   },
   {
-    name: 'Jade',
+    name: "Jade",
     studentNumber: 678343,
     yearOfStudy: 4
   },
   {
-    name: 'Kiren',
+    name: "Kiren",
     studentNumber: 567893,
     yearOfStudy: 4
   }
-]
+];
 
 const modifiedArray = deleteStudent(
   {
-    name: 'Kiren',
+    name: "Kiren",
     studentNumber: 567893,
     yearOfStudy: 4
   },
   students1
-)
-console.log(modifiedArray)
+);
+console.log(modifiedArray);
 
 // Arrow functions
 
-const squareFunc = num => num * num
+const squareFunc = num => num * num;
 // console.log(squareFunc(2))
 
 // first declare a new var and assain the array to it
 const totalElect = electives
   .filter(year => year.yearOffered === 4)
-  .filter(year => year.courseCode === 'ELEN4010')
+  .filter(year => year.courseCode === "ELEN4010");
 
 // console.log(totalElect)
 
 // EXERCISE 10
 
 const electiveOne = {
-  courseCode: 'ELEN4010',
+  courseCode: "ELEN4010",
   yearOffered: 4
-}
+};
 const electiveTwo = {
-  courseCode: 'ELEN4001',
+  courseCode: "ELEN4001",
   yearOffered: 4
-}
+};
 const electiveThree = {
-  courseCode: 'ELEN4020',
+  courseCode: "ELEN4020",
   yearOffered: 4
-}
+};
 const electiveFour = {
-  courseCode: 'ELEN4017',
+  courseCode: "ELEN4017",
   yearOffered: 4
-}
+};
 let students = [
   {
-    name: 'Kwezi',
+    name: "Kwezi",
     studentNumber: 453528,
     yearOfStudy: 4,
     electives: [electiveOne, electiveTwo, electiveThree]
   },
   {
-    name: 'Pieter',
+    name: "Pieter",
     studentNumber: 454345,
     yearOfStudy: 3,
     electives: [electiveOne, electiveTwo, electiveFour]
   },
   {
-    name: 'Jade',
+    name: "Jade",
     studentNumber: 678345,
     yearOfStudy: 4,
     electives: [electiveTwo, electiveThree, electiveFour]
   },
   {
-    name: 'Kiren',
+    name: "Kiren",
     studentNumber: 567893,
     yearOfStudy: 4,
     electives: [electiveOne, electiveTwo, electiveThree]
   }
-]
+];
 
-const totalStudents = students.filter(YOS => YOS.yearOfStudy === 4)
+const totalStudents = students.filter(YOS => YOS.yearOfStudy === 4);
 //   .filter(elective => elective.courseCode === 'ELEN4010')
 //   .map(
 //     el =>
@@ -320,3 +320,16 @@ const totalStudents = students.filter(YOS => YOS.yearOfStudy === 4)
 //   )
 
 // console.log(totalStudents)
+
+// ASYNCHRONOUS FUNCTIONS
+
+console.log("Starting");
+// setTimeout(callback, duration) is an asynchronous version of sleep
+setTimeout(() => {
+  console.log("Done Waiting");
+}, 10000);
+console.log("Done, doing other things");
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+console.log("Done with other things");
