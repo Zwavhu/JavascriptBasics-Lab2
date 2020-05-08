@@ -7,7 +7,7 @@ let mainRouter = express.Router()
 // })
 
 mainRouter.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send('Hello World, node stuff')
 })
 
 mainRouter.get('/about', function (req, res) {
